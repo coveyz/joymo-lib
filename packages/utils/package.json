@@ -1,17 +1,12 @@
 {
-  "name": "joymo-lib",
+  "name": "utils",
   "version": "1.0.0",
   "description": "",
-  "workspaces": [
-    "packages/*"
-  ],
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "vue": "^3.3.4"
-  }
+  "license": "ISC"
 }

@@ -1,10 +1,8 @@
 {
-  "name": "joymo-lib",
+  "name": "components",
   "version": "1.0.0",
   "description": "",
-  "workspaces": [
-    "packages/*"
-  ],
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "^3.3.4"
+    "@element-plus/icons-vue": "^2.1.0",
+    "utils": "workspace:^"
   }
 }
