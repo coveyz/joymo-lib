@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "@coveyz/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@element-plus/icons-vue": "^2.1.0",
-    "utils": "workspace:^"
+    "@element-plus/icons-vue": "^2.1.0"
   }
 }

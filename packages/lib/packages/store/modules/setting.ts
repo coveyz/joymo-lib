@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-// import { configStateType } from '../../index';
 import setting from '../../config';
 
 const { brandMdCode } = setting

@@ -2,7 +2,7 @@ import { RouteRecordRaw } from 'vue-router';
 import { defineStore } from 'pinia';
 import { getRouters } from '../../api/permission';
 import Layout from '../../layout/index.vue';
-import { ParentView } from 'components'
+import { ParentView } from '@coveyz/components'
 
 import { constantRoutes } from '../../hooks/router/default';
 import path from 'path-browserify';

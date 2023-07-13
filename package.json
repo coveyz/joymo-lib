@@ -1,6 +1,7 @@
 {
-  "name": "joymo-lib",
+  "name": "@coveyz/joymo-lib",
   "version": "1.0.0",
+  "main": "packages/lib/packages",
   "description": "",
   "workspaces": [
     "packages/*"
@@ -12,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@coveyz/components": "workspace:^",
+    "@coveyz/utils": "workspace:^",
     "vue": "^3.3.4"
   }
 }

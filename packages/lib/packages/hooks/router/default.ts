@@ -1,6 +1,6 @@
 import { RouteRecordRaw } from 'vue-router';
 import Layout from '../../layout/index.vue';
-import { Dashboard } from 'components';
+import { Dashboard } from '@coveyz/components';
 
 const constantRoutes: RouteRecordRaw[] = [
   {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken, getAdminWebUrl, requestCodeEnum } from 'utils'
+import { getToken, getAdminWebUrl, requestCodeEnum } from '@coveyz/utils'
 import settings from '../config';
 
 

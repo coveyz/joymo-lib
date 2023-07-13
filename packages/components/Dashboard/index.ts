@@ -1,5 +1,5 @@
 import BrickDashboard from './src/index.vue' // SearchPanel
-import { withInstall } from 'utils';
+import { withInstall } from '@coveyz/utils';
 
 export const Dashboard = withInstall(BrickDashboard);
 export default Dashboard

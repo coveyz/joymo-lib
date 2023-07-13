@@ -1,4 +1,4 @@
-import { SearchPanel, ParentView } from 'components';
+import { SearchPanel, ParentView } from '@coveyz/components';
 
 export default [
   SearchPanel, ParentView

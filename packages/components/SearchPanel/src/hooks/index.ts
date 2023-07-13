@@ -1,5 +1,5 @@
 import { onMounted, toRefs, reactive, onBeforeUnmount } from 'vue'
-import { throttleAndDebounce } from 'utils'
+import { throttleAndDebounce } from '@coveyz/utils'
 import type { searchWrapperType } from '../Panel/default'
 
 export const useWrapper = () => {

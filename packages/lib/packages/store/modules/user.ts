@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia';
-import { getToken } from 'utils';
-// import { UserType, UserInfoType } from '../../index';
+import { getToken } from '@coveyz/utils';
 import { getInfo } from '../../api/user';
 
 export type UserType = {

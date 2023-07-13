@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@coveyz/components':
+        specifier: workspace:^
+        version: link:packages/components
+      '@coveyz/utils':
+        specifier: workspace:^
+        version: link:packages/utils
       vue:
         specifier: ^3.3.4
         version: 3.3.4
@@ -17,18 +23,12 @@ importers:
       '@element-plus/icons-vue':
         specifier: ^2.1.0
         version: 2.1.0(vue@3.3.4)
-      utils:
-        specifier: workspace:^
-        version: link:../utils
 
   packages/lib:
     dependencies:
       axios:
         specifier: ^1.4.0
         version: 1.4.0
-      components:
-        specifier: workspace:^
-        version: link:../components
       nprogress:
         specifier: ^0.2.0
         version: 0.2.0
@@ -41,9 +41,6 @@ importers:
       sass:
         specifier: ^1.63.6
         version: 1.63.6
-      utils:
-        specifier: workspace:^
-        version: link:../utils
       vue:
         specifier: ^3.3.4
         version: 3.3.4

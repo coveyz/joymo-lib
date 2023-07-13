@@ -1,8 +1,7 @@
 import NProgress from 'nprogress';
 import "nprogress/nprogress.css";
 import { NavigationGuardNext, Router } from 'vue-router'
-import { getToken,setToken,getAdminWebUrl,parseOriginUrl } from 'utils'
-
+import { getToken,setToken,getAdminWebUrl,parseOriginUrl } from '@coveyz/utils'
 import setting from '../../config';
 import { useUserStore, useSettingStore, usePermissionStore } from '../../store';
 

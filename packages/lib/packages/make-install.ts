@@ -1,5 +1,5 @@
 import type { App, Plugin } from 'vue';
-import { isEmptyObject } from 'utils';
+import { isEmptyObject } from '@coveyz/utils';
 import { setupStore } from './store';
 import config from './config';
 
