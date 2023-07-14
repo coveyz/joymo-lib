@@ -1,0 +1,19 @@
+{
+	"name": "@coveyz/build-utils",
+	"version": "0.0.1",
+	"description": "Buid utils for Lib",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "unbuild",
+		"dev": "pnpm run stub",
+		"stub": "unbuild --stub"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"unbuild": "^1.2.1"
+	}
+}

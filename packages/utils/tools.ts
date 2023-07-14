@@ -34,6 +34,7 @@ export const isEmptyObject = (data: Object) => {
   for (const _key in data) {
     return false
   }
+  
   return true
 }
 

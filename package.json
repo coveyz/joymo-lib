@@ -13,8 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@coveyz/build-utils": "workspace:^",
     "@coveyz/components": "workspace:^",
+    "@coveyz/theme": "workspace:^",
     "@coveyz/utils": "workspace:^",
+    "@esbuild-kit/cjs-loader": "^2.4.2",
+    "@types/gulp": "^4.0.13",
+    "@types/node": "^20.4.2",
+    "consola": "^3.2.3",
+    "gulp": "^4.0.2",
+    "sass": "^1.63.6",
     "vue": "^3.3.4"
   }
 }

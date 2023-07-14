@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"importHelpers": true,
+		"strict": true,
+		"esModuleInterop": true,
+
+		"jsx": "preserve",
+		"target": "ES2017",
+		"module": "ESNext",
+		"lib": ["DOM", "ESNext"],
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"resolveJsonModule": true,
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["packages/*"]
+		},
+		"types": ["element-plus/global"]
+	},
+	"include": ["packages/**/**/*", "packages/**/*"],
+	"exclude": ["node_modules", "dist"]
+}
