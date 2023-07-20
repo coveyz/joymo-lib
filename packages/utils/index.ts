@@ -1,3 +1,2 @@
-export * from './vue';
 export * from './auth';
-export * from './tools';
+export * from './vue';

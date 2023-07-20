@@ -3,13 +3,10 @@ import chalk from 'chalk';
 import consola from 'consola';
 import { projectRoot } from '@coveyz/build-utils';
 
-
-export const run = (command: string, cwd: string = projectRoot) => {
-  console.log('taskUtils-process🧀️', { command, cwd }, '\n');
-
+export const run = async (command: string, cwd: string = projectRoot) => {
   return new Promise<void>((resolve, reject) => {
     const [cmd, ...args] = command.split(' ');
-    consola.info(`run: ${chalk.green(`${cmd} ${args.join(' ')}`)}`);
+    consola.info(`run: ${chalk.green(`${cmd} ${args.join(' ')}`)}`)
 
     const app = spawn(cmd, args, {
       cwd,
@@ -19,17 +16,17 @@ export const run = (command: string, cwd: string = projectRoot) => {
 
     const onProcessExit = () => app.kill('SIGHUP');
 
-
     app.on('close', (code) => {
-      process.removeListener('exit', onProcessExit)
-      if (code === 0) resolve();
-      else {
+      process.removeListener('exit', onProcessExit);
+      if (code === 0) {
+        resolve();
+      } else {
         reject(
-          new Error(`Command failed. \n Command: ${command} \n Code:${code}`)
+          new Error(`Command failed. \n Command: ${command} \n Code: ${code}`)
         )
       }
     })
 
-    process.on('exit', onProcessExit);
+    process.on('exit', onProcessExit)
   })
 }

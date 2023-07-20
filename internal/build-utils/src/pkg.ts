@@ -1,22 +1,39 @@
 import type { ProjectManifest } from '@pnpm/types';
 
-//🥥 排除文件
+/** exclude 排除文件 */
 export const excludeFiles = (files: string[]) => {
-  const excludes = ['node_modules', 'test', 'mock', 'gulpfile', 'dist'];
-
-  return files.filter(path => !excludes.some(exclude => path.includes(exclude)))
+  const excludes = ['node_modules', 'test', 'mock', 'gulpfile', 'dist']
+  return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)))
 }
+
+// export const packageManifest = (pkgPath: string) => {
+//   return require(pkgPath) as ProjectManifest
+// }
+
+// export const getPackageDependencies = (pkgPath: string): Record<'dependencies' | 'peerDependencies', string[]> => {
+//   const manifest = packageManifest(pkgPath);
+//   const { dependencies = {}, peerDependencies = {} } = manifest;
+
+//   return {
+//     dependencies: Object.keys(dependencies),
+//     peerDependencies: Object.keys(peerDependencies)
+//   }
+// }
+
 
 export const getPackageManifest = (pkgPath: string) => {
-  return require(pkgPath) as ProjectManifest;
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  return require(pkgPath) as ProjectManifest
 }
 
-export const getPackageDependencies = (pkgPath: string): Record<'dependencies' | 'peerDependencies', string[]> => {
-  const manifest = getPackageManifest(pkgPath);
-  const { dependencies = {}, peerDependencies = {} } = manifest;
+export const getPackageDependencies = (
+  pkgPath: string
+): Record<'dependencies' | 'peerDependencies', string[]> => {
+  const manifest = getPackageManifest(pkgPath)
+  const { dependencies = {}, peerDependencies = {} } = manifest
 
   return {
     dependencies: Object.keys(dependencies),
-    peerDependencies: Object.keys(peerDependencies)
+    peerDependencies: Object.keys(peerDependencies),
   }
 }

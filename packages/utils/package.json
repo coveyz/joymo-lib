@@ -1,12 +1,9 @@
 {
   "name": "@coveyz/utils",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
   "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
 }

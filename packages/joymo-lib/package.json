@@ -1,0 +1,41 @@
+{
+	"name": "joymo-lib",
+	"version": "1.0.0",
+	"description": "",
+	"main": "lin/index.js",
+	"module": "es/index.mjs",
+	"types": "es/index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"peerDependencies": {
+		"vue": "^3.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "*",
+		"csstype": "^2.6.20",
+		"vue": "^3.2.37",
+		"vue-router": "^4.0.16"
+	},
+  "dependencies": {
+		"@vueuse/core": "^10.2.1"
+	},
+	"exports": {
+		".": {
+			"types": "./es/index.d.ts",
+			"import": "./es/index.mjs",
+			"require": "./lib/index.js"
+		},
+		"./es": "./es/index.mjs",
+		"./lib": "./lib/index.js",
+		"./es/*.mjs": "./es/*.mjs",
+		"./es/*": "./es/*.mjs",
+		"./lib/*.js": "./lib/*.js",
+		"./lib/*": "./lib/*.js",
+		"./*": "./*"
+	},
+	"style": "dist/index.css"
+}

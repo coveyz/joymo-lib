@@ -1,15 +1,12 @@
 {
-  "name": "@coveyz/components",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@element-plus/icons-vue": "^2.1.0"
-  }
+	"name": "@coveyz/components",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.ts",
+	"module": "index.ts",
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"sideEffects": false
 }

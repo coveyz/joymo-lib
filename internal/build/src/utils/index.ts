@@ -1,3 +1,3 @@
 export * from './process';
-export * from './glup';
+export * from './gulp';
 export * from './rollup';

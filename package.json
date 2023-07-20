@@ -1,30 +1,52 @@
 {
-	"name": "@coveyz/joymo-lib",
+	"name": "joymo-lib",
 	"version": "1.0.0",
-	"main": "packages/lib/packages",
 	"description": "",
-	"workspaces": [
-		"packages/*"
-	],
+	"main": "index.js",
 	"scripts": {
-    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
-    "clean:dist": "rimraf dist",
-		"build": "pnpm run -C internal/build start"
+		"build": "pnpm run -C internal/build start",
+		"clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+		"clean:dist": "rimraf dist"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "coveyz",
 	"license": "ISC",
 	"dependencies": {
-		"@coveyz/build-utils": "workspace:^",
 		"@coveyz/components": "workspace:^",
-		"@coveyz/theme": "workspace:^",
-		"@coveyz/utils": "workspace:^",
-		"@esbuild-kit/cjs-loader": "^2.4.2",
+		"@coveyz/utils": "workspace:^"
+	},
+	"devDependencies": {
+		"@coveyz/build": "workspace:^",
+		"@coveyz/build-utils": "workspace:^",
+		"@esbuild-kit/cjs-loader": "^2.2.1",
+		"@pnpm/types": "^8.4.0",
 		"@types/gulp": "^4.0.13",
-		"@types/node": "^20.4.2",
-		"consola": "^3.2.3",
-		"gulp": "^4.0.2",
-		"sass": "^1.63.6",
-		"vue": "^3.3.4"
+		"@types/node": "*",
+		"@vitejs/plugin-vue": "^2.3.3",
+		"@vitejs/plugin-vue-jsx": "^1.3.10",
+		"@vue/test-utils": "^2.0.0",
+		"@vue/tsconfig": "^0.1.3",
+		"rimraf": "^5.0.1",
+		"typescript": "^5.1.6",
+		"unplugin-vue-macros": "^0.11.2",
+		"vitest": "^0.12.6",
+		"vue": "^3.2.37",
+		"vue-router": "^4.0.16",
+    "vue-tsc": "^0.38.2"
+	},
+	"peerDependencies": {
+		"vue": "^3.2.0"
+	},
+	"engines": {
+		"node": ">= 16"
+	},
+	"pnpm": {
+		"peerDependencyRules": {
+			"ignoreMissing": [
+				"vite",
+				"react",
+				"react-dom"
+			]
+		}
 	}
 }
