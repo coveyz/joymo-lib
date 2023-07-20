@@ -5,13 +5,16 @@ import VueMacros from 'unplugin-vue-macros/rollup';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
-
 import glob from 'fast-glob';
-import { excludeFiles, pkgRoot } from '@coveyz/build-utils';
-import { JoymoLibAlias } from '../plugins/alias';
-import { target } from '../build-info';
-import { generateExternal } from '../utils';
 
+import { epRoot, excludeFiles, pkgRoot } from '@coveyz/build-utils';
+import { JoymoLibAlias } from '../plugins/alias';
+import { buildConfigEntries, target } from '../build-info';
+import { generateExternal, writeBundles } from '../utils';
+
+import type { OutputOptions } from 'rollup';
+
+/** 🧀 构建bundless 产物 */
 export const buildModules = async () => {
   const input = excludeFiles(
     await glob('**/*.{js,ts,vue}', {
@@ -21,42 +24,48 @@ export const buildModules = async () => {
     })
   )
 
-  console.log('input=>', input);
+  const bundle = await rollup({
+    input,
+    plugins: [
+      JoymoLibAlias(),
+      VueMacros({
+        setupComponent: false,
+        setupSFC: false,
+        plugins: {
+          vue: vue({
+            isProduction: false
+          }),
+          vueJsx: vueJsx()
+        }
+      }),
+      nodeResolve({
+        extensions: ['.mjs', '.js', '.json', '.ts'],
+      }),
+      commonjs(),
+      esbuild({
+        sourceMap: true,
+        target,
+        loaders: {
+          '.vue': 'ts'
+        },
+      })
+    ],
+    external: await generateExternal({ full: false }), //🧀 将dependencies & peerDependencies 排除在构建之外
+    treeshake: false,
+  })
 
-  try {
-    const bundle = await rollup({
-      input,
-      plugins: [
-        JoymoLibAlias(),
-        VueMacros({
-          setupComponent: false,
-          setupSFC: false,
-          plugins: {
-            vue: vue({
-              isProduction: false
-            }),
-            vueJsx: vueJsx()
-          }
-        }),
-        nodeResolve({
-          extensions: ['.mjs', '.js', '.json', '.ts'],
-        }),
-        commonjs(),
-        esbuild({
-          sourceMap: true,
-          target,
-          loaders: {
-            '.vue': 'ts'
-          },
-        })
-      ],
-      external: await generateExternal({ full: false }),
-      treeshake: false,
+  await writeBundles(
+    bundle,
+    buildConfigEntries.map(([module, config]): OutputOptions => {
+      return {
+        format: config.format,
+        dir: config.output.path,
+        exports: module === 'cjs' ? 'named' : undefined,
+        preserveModules: true, //🧀 构建产物将保持与源码一样的文件结构
+        preserveModulesRoot: epRoot,
+        sourcemap: true,
+        entryFileNames: `[name].${config.ext}`
+      }
     })
-
-    console.log('bundle=>', bundle);
-  } catch (error) {
-    console.log('error=>', error);
-  }
-
+  )
 }
