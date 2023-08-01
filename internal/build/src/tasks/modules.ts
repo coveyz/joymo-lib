@@ -14,7 +14,7 @@ import { generateExternal, writeBundles } from '../utils';
 
 import type { OutputOptions } from 'rollup';
 
-/** 🧀 构建bundless 产物 */
+/** 🧀 构建 bundless 产物 */
 export const buildModules = async () => {
   const input = excludeFiles(
     await glob('**/*.{js,ts,vue}', {
