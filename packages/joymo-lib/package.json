@@ -1,16 +1,14 @@
 {
-	"name": "joymo-lib",
-	"version": "1.0.0",
-	"description": "",
+	"name": "joymolib-plus",
+	"version": "0.0.0",
+	"description": "Library for Work",
 	"main": "lin/index.js",
 	"module": "es/index.mjs",
 	"types": "es/index.d.ts",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": ["components", "vue"],
+	"author": "coveyz",
+	"license": "MIT",
+  "unpkg": "dist/index.full.js",
 	"peerDependencies": {
 		"vue": "^3.2.0"
 	},
@@ -29,13 +27,38 @@
 			"import": "./es/index.mjs",
 			"require": "./lib/index.js"
 		},
-		"./es": "./es/index.mjs",
-		"./lib": "./lib/index.js",
-		"./es/*.mjs": "./es/*.mjs",
-		"./es/*": "./es/*.mjs",
-		"./lib/*.js": "./lib/*.js",
-		"./lib/*": "./lib/*.js",
-		"./*": "./*"
+    "./es": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.mjs"
+    },
+    "./es/*.mjs": {
+      "types": "./es/*.d.ts",
+      "import": "./es/*.mjs"
+    },
+    "./es/*": {
+      "types": ["./es/*.d.ts", "./es/*/index.d.ts"],
+      "import": "./es/*.mjs"
+    },
+    "./lib": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.js"
+    },
+    "./lib/*.js": {
+      "types": "./lib/*.d.ts",
+      "require": "./lib/*.js"
+    },
+    "./lib/*": {
+      "types": ["./lib/*.d.ts", "./lib/*/index.d.ts"],
+      "require": "./lib/*.js"
+    },
+    "./*": "./*"
 	},
-	"style": "dist/index.css"
+	"style": "dist/index.css",
+  "sideEffects": [
+    "dist/*",
+    "theme-chalk/**/*.css",
+    "theme-chalk/src/**/*.scss",
+    "es/components/*/style/*",
+    "lib/components/*/style/*"
+  ]
 }

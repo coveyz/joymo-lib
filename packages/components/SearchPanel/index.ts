@@ -1,4 +1,4 @@
-import { withInstall } from '@coveyz/utils'
+import { withInstall } from '../../utils'
 
 import searchPanel from './src/searchPanel.vue'
 

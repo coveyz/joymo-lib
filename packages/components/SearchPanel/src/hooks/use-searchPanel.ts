@@ -1,5 +1,5 @@
 import { onMounted, toRefs, reactive, onBeforeUnmount } from 'vue'
-import { throttleAndDebounce } from '@coveyz/utils';
+import { throttleAndDebounce } from '../../../../utils';
 
 export type searchWrapperType = {
   id: string,
