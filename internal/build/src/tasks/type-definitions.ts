@@ -15,8 +15,7 @@ const outDir = path.resolve(buildOutput, 'types'),
   TSCONFIG_PATH = path.resolve(projectRoot, 'tsconfig.web.json');
 
 /** 🧀 生成类型文件 */
-export const generateTypesDefinitions = async () => {
-
+export const generateTypesDefinitions = async (done) => {
   const compilerOptions: CompilerOptions = {
     emitDeclarationOnly: true,
     outDir,

@@ -30,6 +30,7 @@
 	"devDependencies": {
 		"@esbuild-kit/cjs-loader": "^2.2.1",
 		"@types/node": "*",
+		"fs-extra": "^10.1.0",
 		"unbuild": "^1.2.1",
 		"vue": "^3.2.37"
 	},

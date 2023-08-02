@@ -12,5 +12,4 @@ export const buildOutput = resolve(projectRoot, 'dist');
 /** dist/joymo-lib */
 export const epOutput = resolve(buildOutput, 'joymo-lib');
 
-
 export const epPackage = resolve(epRoot, 'package.json');

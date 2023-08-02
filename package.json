@@ -21,6 +21,7 @@
 		"@coveyz/build-utils": "workspace:^",
 		"@esbuild-kit/cjs-loader": "^2.2.1",
 		"@pnpm/types": "^8.4.0",
+		"@types/fs-extra": "^9.0.13",
 		"@types/gulp": "^4.0.13",
 		"@types/node": "^0.0.0",
 		"@vitejs/plugin-vue": "^2.3.3",
