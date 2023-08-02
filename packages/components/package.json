@@ -8,5 +8,8 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"sideEffects": false
+	"sideEffects": false,
+	"devDependencies": {
+		"@iconify/vue": "^4.1.1"
+	}
 }
