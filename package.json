@@ -1,6 +1,6 @@
 {
-	"name": "joymo-lib",
-	"version": "1.0.0",
+	"name": "joymolib-plus",
+	"version": "0.0.3",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -8,6 +8,9 @@
 		"clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
 		"clean:dist": "rimraf dist"
 	},
+  "workspaces": [
+    "packages/*"
+  ],
 	"keywords": [],
 	"author": "coveyz",
 	"license": "ISC",
