@@ -2,7 +2,7 @@
 	"name": "joymolib-plus",
 	"version": "0.0.0",
 	"description": "Library for Work",
-	"main": "lin/index.js",
+	"main": "lib/index.js",
 	"module": "es/index.mjs",
 	"types": "es/index.d.ts",
 	"keywords": ["components", "vue"],

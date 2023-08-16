@@ -57,5 +57,8 @@
 				"react-dom"
 			]
 		}
-	}
+	},
+  "exports": {
+    
+  }
 }

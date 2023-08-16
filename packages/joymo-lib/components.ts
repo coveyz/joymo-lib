@@ -1,5 +1,5 @@
-import { SearchPanel } from '@coveyz/components/searchPanel';
+import { JSearchPanel } from '@coveyz/components/searchPanel';
 
 export default [
-  SearchPanel
+  JSearchPanel
 ]
