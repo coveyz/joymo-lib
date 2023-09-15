@@ -1,1 +1,0 @@
-import '@coveyz/theme-chalk/src/searchPanel.scss';

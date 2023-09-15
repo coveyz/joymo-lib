@@ -1,2 +1,2 @@
-export * from './Icons';
-export * from './SearchPanel';
+export * from './icons';
+export * from './search-panel';

@@ -1,8 +1,19 @@
+<!-- <script lang="ts">
+export default {
+	name: 'JSearchPanel',
+};
+</script> -->
+
 <script setup lang="ts">
 //@ts-ignore
 import { useWrapper } from './hooks/use-searchPanel';
 import { useRenderIcon } from '@coveyz/components';
 const { id, hidden, showHiddenBtn, toggle } = useWrapper();
+
+
+defineOptions({
+  name: 'JSearchPanel',
+})
 </script>
 
 <template>

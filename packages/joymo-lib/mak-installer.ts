@@ -5,7 +5,9 @@ const version = `0.0.0-dev.1`;
 
 export const makeInstaller = (components: Plugin[] = []) => {
   const install = (app: App, opts = {}) => {
-    components.forEach(c => app.use(c));
+    components.forEach(c => {
+      app.use(c)
+    });
   }
 
   return {

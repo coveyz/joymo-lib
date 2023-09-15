@@ -1,4 +1,4 @@
-import { JSearchPanel } from '@coveyz/components/searchPanel';
+import { JSearchPanel } from '@coveyz/components/search-panel';
 
 export default [
   JSearchPanel

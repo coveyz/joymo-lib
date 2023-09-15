@@ -1,0 +1,25 @@
+{
+	"name": "@coveyz/play",
+	"private": true,
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"vite": "^2.9.15"
+	},
+	"dependencies": {
+		"@vitejs/plugin-vue": "^2.3.3",
+		"mkcert": "^3.0.0",
+		"unplugin-vue-components": "^0.21.2",
+		"vite-plugin-inspect": "^0.7.38",
+		"vite-plugin-mkcert": "^1.16.0",
+		"vue": "^3.2.37"
+	}
+}
