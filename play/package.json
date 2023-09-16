@@ -16,6 +16,7 @@
 	},
 	"dependencies": {
 		"@vitejs/plugin-vue": "^2.3.3",
+		"element-plus": "^2.3.14",
 		"mkcert": "^3.0.0",
 		"unplugin-vue-components": "^0.21.2",
 		"vite-plugin-inspect": "^0.7.38",

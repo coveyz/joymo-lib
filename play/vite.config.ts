@@ -14,6 +14,7 @@ import esbuild from 'rollup-plugin-esbuild'
 import { joymoLibResolver } from './utils/resolver'
 
 import type { Plugin } from 'vite';
+
 const esbuildPlugin = (): any => ({
   ...esbuild({
     target: 'chrome64',
@@ -66,6 +67,7 @@ export default defineConfig(async ({ mode }) => {
       Components({
         include: `${__dirname}/**`,
         dts: false,
+        //@ts-ignore
         resolvers: joymoLibResolver()
       }),
       mkcert(),
