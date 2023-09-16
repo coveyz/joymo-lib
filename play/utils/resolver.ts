@@ -14,7 +14,17 @@ const resolveComponent = (name: string, options = {}) => {
   if (!name.match(/^J[A-Z]/)) {
     return
   }
-  // console.log('name=.', kebabCase(name))
+  console.log('name=>', name)
+
+  if (name.match(/^JIcon/)) {
+    return {
+      name,
+      from: 'joymo-lib/es'
+    }
+  }
+
+
+  console.log('name=.', kebabCase(name))
   // console.log('partialName=.', kebabCase(name).slice(2))
   const partialName = kebabCase(name).slice(2);
   return {
@@ -31,7 +41,6 @@ export const joymoLibResolver = (options = {}) => {
     {
       type: 'component',
       resolve: async (name: string) => {
-        // console.log('joymoLibResolver-components=>', name);
         return resolveComponent(name)
       }
     }

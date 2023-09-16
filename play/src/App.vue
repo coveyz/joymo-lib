@@ -13,6 +13,9 @@
 				</el-form-item>
 			</el-form>
 		</JSearchPanel>
+
+		<JIcon icon="ep:arrow-up" :attrs="state.attrsUp" />
+		<JIcon icon="ep:arrow-down" :attrs="state.attrsDown" />
 	</div>
 </template>
 
@@ -26,6 +29,12 @@ const state = reactive({
 		test1: '',
 		test2: '',
 		test3: '',
+	},
+	attrsUp: {
+		color: 'red',
+	},
+	attrsDown: {
+		color: 'blue',
 	},
 });
 </script>

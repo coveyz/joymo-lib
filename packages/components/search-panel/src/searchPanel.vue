@@ -10,7 +10,7 @@ import { useWrapper } from './hooks/use-searchPanel';
 import { useRenderIcon } from '@coveyz/components';
 const { id, hidden, showHiddenBtn, toggle } = useWrapper();
 
-
+//@ts-ignore
 defineOptions({
   name: 'JSearchPanel',
 })
@@ -22,8 +22,8 @@ defineOptions({
 		<div class="form-btn">
 			<slot name="btn" />
 			<div @click="toggle" v-if="showHiddenBtn">
-				<!-- <el-button v-if="hidden" :icon="useRenderIcon('ep:arrow-up')" class="more-btn" />
-				<el-button v-else :icon="useRenderIcon('ep:arrow-down')" class="more-btn" /> -->
+				<el-button v-if="hidden" :icon="useRenderIcon('ep:arrow-up')" class="more-btn" />
+				<el-button v-else :icon="useRenderIcon('ep:arrow-down')" class="more-btn" />
 			</div>
 		</div>
 	</div>
