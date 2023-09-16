@@ -7,7 +7,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "pnpm -C play dev",
-		"gen": "",
+		"gen": "node ./scripts/gc.ts",
 		"gen:version": "",
 		"build": "pnpm run -C internal/build start",
 		"clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
@@ -63,5 +63,8 @@
 			]
 		}
 	},
-	"exports": {}
+	"exports": {},
+	"lint-staged": {
+		"*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+	}
 }

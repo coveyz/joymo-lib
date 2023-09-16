@@ -1,1 +1,1 @@
-import '@coveyz/theme-chalk/src/j-searchPanel.css';
+import '@coveyz/theme-chalk/src/j-search-panel.css';

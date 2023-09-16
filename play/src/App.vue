@@ -16,6 +16,10 @@
 
 		<JIcon icon="ep:arrow-up" :attrs="state.attrsUp" />
 		<JIcon icon="ep:arrow-down" :attrs="state.attrsDown" />
+
+    <JTestZkr />
+
+    <div class="666">66</div>
 	</div>
 </template>
 
